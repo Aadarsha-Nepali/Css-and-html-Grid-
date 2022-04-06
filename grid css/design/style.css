@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.grid-container{
+    background-color: blue;
+    /*if you wont use height but if there is content it 
+    will occupy the space*/
+    /* width: 550px; */
+    display: grid;
+    height: 700px;
+    /* grid-template-columns:130px 130px 130px; */
+    /* grid-template-rows: 130px 130px 130px;instead of using fr u can give how much px u want to enter  */
+    row-gap: 20px;
+    column-gap: 20px;
+    /* grid-template-columns: repeat(3,1fr); /*1 fr means the one fraction */
+    /* and repeat means it will repeat 3 times*/ 
+    /* grid-template-rows: repeat(3,1fr); */
+    grid-template-rows:45px 1fr 45px; 
+    grid-template-columns:1fr 1fr 1fr; 
+    justify-items: center;
+}
+
+.items{
+    background-color: brown;
+    /* height: 100px;
+    width: 100px;*/
+}
+.header{
+    /*no.1 grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1 /span 3; 
+    /*using this is more easy and less 
+    consuming time rather than using no.1 */
+    background: #000;
+
+}.footer{  
+    /* no.1 grid-column-start: 1;
+    grid-column-end:4; */
+    /* Better use this rather than using no.1 */
+    grid-column:1 /span 3;
+    background: #000;
+}
